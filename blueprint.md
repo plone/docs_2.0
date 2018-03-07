@@ -3,22 +3,22 @@
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Documetation 2.0](#documetation-20)
-	- [Introduction []()](#introduction-)
-	- [Improvements []()](#improvements-)
-		- [Appearance []()](#appearance-)
-		- [Audience []()](#audience-)
-		- [Style []()](#style-)
-		- [Structure []()](#structure-)
-		- [Search []()](#search-)
-		- [Branches []()](#branches-)
-	- [Testing []()](#testing-)
-		- [CI []()](#ci-)
-		- [Tests On Commits []()](#tests-on-commits-)
-		- [Tests On All Docs []()](#tests-on-all-docs-)
-		- [Redactor []()](#redactor-)
-		- [Test Overview []()](#test-overview-)
-	- [Building []()](#building-)
-		- [Coster []()](#coster-)
+	- [Introduction](#introduction)
+	- [Improvements](#improvements)
+		- [Appearance](#appearance)
+		- [Audience](#audience)
+		- [Style](#style)
+		- [Structure](#structure)
+		- [Search](#search)
+		- [Branches](#branches)
+	- [Testing](#testing)
+		- [CI](#ci)
+		- [Tests On Commits](#tests-on-commits)
+		- [Tests On All Docs](#tests-on-all-docs)
+		- [Redactor](#redactor)
+		- [Test Overview](#test-overview)
+	- [Building](#building)
+		- [Coster](#coster)
 	- [Deploying](#deploying)
 		- [Each version in own container, plus weekly builds of 'unreleased'](#each-version-in-own-container-plus-weekly-builds-of-unreleased)
 		- [Coster pushes to Docker Hub](#coster-pushes-to-docker-hub)
@@ -30,17 +30,17 @@
 
 <!-- /TOC -->
 
- ## Abstract []()
+ ## Abstract
 
 - Goals: User focused, Modern, Lessons Learned
 
-## Introduction []()
+## Introduction
 
 - Some words about current state and what we can do better
 
-## Improvements []()
+## Improvements
 
-### Appearance []()
+### Appearance
 
 Make the _look and feel_ better, make it easier for people to _identify_ and find what they are looking for. This can be done for example with a improved landing-page, with visual improvements and adding _boxes_ per audience.
 
@@ -68,23 +68,23 @@ Examples of content focused themes with less visual interruptions
 
 ![alt text](https://raw.githubusercontent.com/plone/docs_2.0/master/_static/docs_ttd.png "TTD Docs")
 
-### Audience []()
+### Audience
 
-### Style []()
+### Style
 
-### Structure []()
+### Structure
 
-### Search []()
+### Search
 
-### Branches []()
+### Branches
 
-## Testing []()
+## Testing
 
-### CI []()
+### CI
 
 We will use a dedicated CI setup for the docs. All tests are running in containers, meaning we can use them better, faster and everywhere.
 
-### Tests On Commits []()
+### Tests On Commits
 
 The way how we run tests will change. With the new setup we will test with each commit or PR only the files which are changed. This has the following advantages:
 
@@ -93,13 +93,13 @@ The way how we run tests will change. With the new setup we will test with each 
 - it is less de-motivating for people, since CI is "only" complaining about "their" commits.
 - tests are based on Redactor
 
-### Tests On All Docs []()
+### Tests On All Docs
 
-### Redactor []()
+### Redactor
 
 This is our new test-framework where we can configure the amount of tests and also the level, etc. Some of the tests we "only" run on release time, like HTML, other ones like style-guide we run **always**.
 
-### Test Overview []()
+### Test Overview
 
 - spell-check
 - link-check
@@ -112,9 +112,9 @@ This is our new test-framework where we can configure the amount of tests and al
 - ...
 - ....
 
-## Building []()
+## Building
 
-### Coster []()
+### Coster
 
 Coster is the re-written and improved version of papyrus. Here we configure which "external" (like ansible-playbooks and branch) docs we fetch and where we put these in our docs. Coster can handle _rst_ and _md_ ! Coster also fetches all images we need which are created by our jenkins-robots.
 
