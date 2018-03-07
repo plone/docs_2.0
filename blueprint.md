@@ -2,41 +2,39 @@
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
- - [Documetation 2.0](#documetation-20)
+ - [Introduction](#introduction)
+- [Improvements](#improvements)
 
-  - [Introduction](#introduction)
-  - [Improvements](#improvements)
+  - [Appearance](#appearance)
+  - [Audience](#audience)
+  - [Style](#style)
+  - [Structure](#structure)
+  - [Search](#search)
+  - [Branches](#branches)
 
-    - [Appearance](#appearance)
-    - [Audience](#audience)
-    - [Style](#style)
-    - [Structure](#structure)
-    - [Search](#search)
-    - [Branches](#branches)
+- [Testing](#testing)
 
-  - [Testing](#testing)
+  - [CI](#ci)
+  - [Tests On Commits](#tests-on-commits)
+  - [Tests On All Docs](#tests-on-all-docs)
+  - [Redactor](#redactor)
+  - [Test Overview](#test-overview)
 
-    - [CI](#ci)
-    - [Tests On Commits](#tests-on-commits)
-    - [Tests On All Docs](#tests-on-all-docs)
-    - [Redactor](#redactor)
-    - [Test Overview](#test-overview)
+- [Building](#building)
 
-  - [Building](#building)
+  - [Coster](#coster)
 
-    - [Coster](#coster)
+- [Deploying](#deploying)
 
-  - [Deploying](#deploying)
+  - [Each version in own container, plus weekly builds of 'unreleased'](#each-version-in-own-container-plus-weekly-builds-of-unreleased)
+  - [Coster pushes to Docker Hub](#coster-pushes-to-docker-hub)
+  - [Hosting](#hosting)
 
-    - [Each version in own container, plus weekly builds of 'unreleased'](#each-version-in-own-container-plus-weekly-builds-of-unreleased)
-    - [Coster pushes to Docker Hub](#coster-pushes-to-docker-hub)
-    - [Hosting](#hosting)
+- [Helper Tools](#helper-tools)
 
-  - [Helper Tools](#helper-tools)
-
-    - [Henry (add henry docs overview)](#henry-add-henry-docs-overview)
-    - [Coster (add coster docs overview)](#coster-add-coster-docs-overview)
-    - [Redactor (note you can run tests also without Redactor)](#redactor-note-you-can-run-tests-also-without-redactor)
+  - [Henry (add henry docs overview)](#henry-add-henry-docs-overview)
+  - [Coster (add coster docs overview)](#coster-add-coster-docs-overview)
+  - [Redactor (note you can run tests also without Redactor)](#redactor-note-you-can-run-tests-also-without-redactor)
 
 <!-- /TOC -->
 
