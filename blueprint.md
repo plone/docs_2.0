@@ -1,11 +1,12 @@
 # Documetation 2.0
 
-<!-- MarkdownTOC -->
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- Abstract
-- Introduction
+- [Documetation 2.0](#documetation-20)
+	- [Abstract](#abstract)
+	- [Introduction](#introduction)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
 
 
 ## Abstract
