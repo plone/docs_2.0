@@ -2,31 +2,41 @@
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Documetation 2.0](#documetation-20)
-	- [Introduction](#introduction)
-	- [Improvements](#improvements)
-		- [Appearance](#appearance)
-		- [Audience](#audience)
-		- [Style](#style)
-		- [Structure](#structure)
-		- [Search](#search)
-		- [Branches](#branches)
-	- [Testing](#testing)
-		- [CI](#ci)
-		- [Tests On Commits](#tests-on-commits)
-		- [Tests On All Docs](#tests-on-all-docs)
-		- [Redactor](#redactor)
-		- [Test Overview](#test-overview)
-	- [Building](#building)
-		- [Coster](#coster)
-	- [Deploying](#deploying)
-		- [Each version in own container, plus weekly builds of 'unreleased'](#each-version-in-own-container-plus-weekly-builds-of-unreleased)
-		- [Coster pushes to Docker Hub](#coster-pushes-to-docker-hub)
-		- [Hosting](#hosting)
-	- [Helper Tools](#helper-tools)
-		- [Henry (add henry docs overview)](#henry-add-henry-docs-overview)
-		- [Coster (add coster docs overview)](#coster-add-coster-docs-overview)
-		- [Redactor (note you can run tests also without Redactor)](#redactor-note-you-can-run-tests-also-without-redactor)
+ - [Documetation 2.0](#documetation-20)
+
+  - [Introduction](#introduction)
+  - [Improvements](#improvements)
+
+    - [Appearance](#appearance)
+    - [Audience](#audience)
+    - [Style](#style)
+    - [Structure](#structure)
+    - [Search](#search)
+    - [Branches](#branches)
+
+  - [Testing](#testing)
+
+    - [CI](#ci)
+    - [Tests On Commits](#tests-on-commits)
+    - [Tests On All Docs](#tests-on-all-docs)
+    - [Redactor](#redactor)
+    - [Test Overview](#test-overview)
+
+  - [Building](#building)
+
+    - [Coster](#coster)
+
+  - [Deploying](#deploying)
+
+    - [Each version in own container, plus weekly builds of 'unreleased'](#each-version-in-own-container-plus-weekly-builds-of-unreleased)
+    - [Coster pushes to Docker Hub](#coster-pushes-to-docker-hub)
+    - [Hosting](#hosting)
+
+  - [Helper Tools](#helper-tools)
+
+    - [Henry (add henry docs overview)](#henry-add-henry-docs-overview)
+    - [Coster (add coster docs overview)](#coster-add-coster-docs-overview)
+    - [Redactor (note you can run tests also without Redactor)](#redactor-note-you-can-run-tests-also-without-redactor)
 
 <!-- /TOC -->
 
@@ -70,13 +80,44 @@ Examples of content focused themes with less visual interruptions
 
 ### Audience
 
+Better and easier distinction between audiences, if a user is looking for the docs about theming the user is at this moment not interested in docs about ZEODB.
+
+To do so we need to make sure that all docs in the different categories are really:
+
+- _straight to the point_
+- written in the right tone and voice for the category
+- understandable
+- the user does not get distracted with to much **noise** (like look and feel, etc)
+
 ### Style
+
+- shorter items
+- consistent style-guide and usage of terms
+- consistent and shorter headings
 
 ### Structure
 
+Improve the structure by moving some parts to other locations. Our current structure does is not always logical or understandable for (new) developer.
+
+We can improve that by re-locating some parts to other locations and by 'merging' some parts into one chapter. Examples are here: Installation and developer docs. I am sure there are more places where we can do that.
+
+Further remove/improve the structure to make the docs less **nested**.
+
+It is often confusing for user that some docs are really **deep** nested like _docs.plone.org/develop/bla/bla/bla/bla_
+
+List of other structure improvements:
+
+- remove **/external**
+- remove **READMEs** of docs we include
+
 ### Search
 
+- custom search per _audience_ like searching only in _theming_ or _installing_
+- better **docs.plone.org/search** atm the mix between Agolia and Sphinx is confusing, create a **/search** with Agolia API.
+
 ### Branches
+
+There is already a open issue for that, we will change the way how the docs are branched.
 
 ## Testing
 
