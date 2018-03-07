@@ -1,11 +1,13 @@
-# Documetation 2.0
+# Documentation 2.0
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
  - [Introduction](#introduction)
-- [Improvements](#improvements)
+
+  - [Improvements](#improvements)
 
   - [Appearance](#appearance)
+
   - [Audience](#audience)
   - [Style](#style)
   - [Structure](#structure)
@@ -78,7 +80,7 @@ Examples of content focused themes with less visual interruptions
 
 ### Audience
 
-Better and easier distinction between audiences, if a user is looking for the docs about theming the user is at this moment not interested in docs about ZEODB.
+Better and easier distinction between audiences. If a user is looking for the docs about theming the user is at this moment not interested in docs about ZEODB.
 
 To do so we need to make sure that all docs in the different categories are really:
 
@@ -97,7 +99,9 @@ To do so we need to make sure that all docs in the different categories are real
 
 Improve the structure by moving some parts to other locations. Our current structure does is not always logical or understandable for (new) developer.
 
-We can improve that by re-locating some parts to other locations and by 'merging' some parts into one chapter. Examples are here: Installation and developer docs. I am sure there are more places where we can do that.
+We can improve that by re-locating some parts to other locations and by 'merging' some parts into one chapter. Examples are here: Installation and developer docs.
+
+I am sure there are more places where we can do that.
 
 Further remove/improve the structure to make the docs less **nested**.
 
@@ -125,7 +129,9 @@ We will use a dedicated CI setup for the docs. All tests are running in containe
 
 ### Tests On Commits
 
-The way how we run tests will change. With the new setup we will test with each commit or PR only the files which are changed. This has the following advantages:
+The way how we run tests will change. With the new setup we will test with each commit or PR only the files which are changed.
+
+This has the following advantages:
 
 - tests are faster
 - we can better and 'easier' improve the docs and its tests
@@ -155,7 +161,11 @@ This is our new test-framework where we can configure the amount of tests and al
 
 ### Coster
 
-Coster is the re-written and improved version of papyrus. Here we configure which "external" (like ansible-playbooks and branch) docs we fetch and where we put these in our docs. Coster can handle _rst_ and _md_ ! Coster also fetches all images we need which are created by our jenkins-robots.
+Coster is the re-written and improved version of papyrus. Here we configure which "external" (like ansible-playbooks and branch) docs we fetch and where we put these in our docs.
+
+Coster can handle _rst_ and _md_ !
+
+Coster also fetches all images we need which are created by our jenkins-robots.
 
 After Coster is done fetching and building the docs, we do run again tests on the created HTML, like HTML validation, accessibility checks, etc, etc.
 
@@ -169,11 +179,13 @@ Each version like 3, 4, 5 gets a own container.
 
 ### Coster pushes to Docker Hub
 
-See above, Coster creates, tags and uploads the container to Docker Hub. For "unstable" this will be done, once a week or so.
+See above, Coster creates, tags and uploads the container to Docker Hub.
+
+For "unstable" this will be done, once a week or so.
 
 This is also perfect for local usage, "just" do
 
-```
+```bash
 docker pull plone/documentation/5
 ```
 
@@ -181,7 +193,7 @@ and you get the latest docs of Plone 5.x which you can run locally and also off-
 
 Or do
 
-```
+```bash
 henry serve
 ```
 
