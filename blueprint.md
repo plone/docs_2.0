@@ -34,11 +34,19 @@
 
  ## Abstract
 
-- Goals: User focused, Modern, Lessons Learned
+These document outlines the new "specs" for a better and improved documentation.
+
+We learned a lot of the last years, let us translate all this into better and user orientated documentation.
+
+They key here is **user orientated**.
+
+We have different audiences and thus different needs.
+
+All of them are equal !
 
 ## Introduction
 
-- Some words about current state and what we can do better
+From improving the wording, over structure till building and releasing this document (WIP) tries to cover all these steps.
 
 ## Improvements
 
@@ -52,9 +60,9 @@ Make the _look and feel_ better, make it easier for people to _identify_ and fin
 
 Use a theme which is focused on presenting content !
 
-If you "click" on the box with your audience you get immediately to the parts of the docs you are looking for, for example "theming" and then you only see the theming docs, if you click "here" on search you get a custom search (with a button) to search all docs, too.
+Our current one is too distracting.
 
-"Rethink" our terms, for "us" (old plone ppl) lots of our terms makes sense but that is not always the case for newer people. We should try to adopt that.
+If you "click" on the box with your audience you get immediately to the parts of the docs you are looking for, for example "theming" and then you only see the theming docs, if you click "here" on search you get a custom search (with a button) to search all docs, too.
 
 Examples of content focused themes with less visual interruptions
 
@@ -76,18 +84,29 @@ Better and easier distinction between audiences. If a user is looking for the do
 
 To do so we need to make sure that all docs in the different categories are really:
 
-- _straight to the point_
+- **straight to the point**
 - written in the right tone and voice for the category
 - understandable
 - the user does not get distracted with to much **noise** (like look and feel, etc)
 
 ### Style
 
+- "rethink" our terms, for "us" (old plone ppl) lots of our terms makes sense but that is not always the case for newer people.
 - shorter items
 - consistent style-guide and usage of terms
 - consistent and shorter headings
 
 ### Structure
+
+Improve the structure by moving some parts to other locations. Our current structure does is not always logical or understandable for (new) developer.
+
+We can improve that by re-locating some parts to other locations and by 'merging' some parts into one chapter. Examples are here: Installation and developer docs
+
+Further remove/improve the structure to make the docs less **nested**.
+
+It is often confusing for user that some docs are really **deep** nested like _docs.plone.org/develop/bla/bla/bla/bla_
+
+Stay as _flat_ as possible !
 
 #### README Removal
 
@@ -117,24 +136,19 @@ Further is breaks with the structure and consistency of the docs.
 
 #### Splitting
 
-(standalone)
+Splitting the docs into "standalone" parts.
 
-Improve the structure by moving some parts to other locations. Our current structure does is not always logical or understandable for (new) developer.
+We started already doing that with the training docs.
 
-We can improve that by re-locating some parts to other locations and by 'merging' some parts into one chapter. Examples are here: Installation and developer docs.
+For example each "main" chapter (installing. theming, developing) should be this way.
 
-I am sure there are more places where we can do that.
+By doing so we will be able to make (faster) "canary releases", we can provide a better user experience, etc, etc.
 
-Further remove/improve the structure to make the docs less **nested**.
+One other huge reason is that by doing so we can run tests against the docs, easier and faster, too.
 
-It is often confusing for user that some docs are really **deep** nested like _docs.plone.org/develop/bla/bla/bla/bla_
+This also provides _ah moments_ because contributors see their PR faster merged and the tests also reporting _only_ on their changes.
 
-List of other structure improvements:
-
-- remove **/external**
-- remove **READMEs** of docs we include
-
-**ToDo** Screen of README in docs
+Of course we can choose during a release to do a _full_ or only a _chapter_ release.
 
 ### Search
 
@@ -143,7 +157,27 @@ List of other structure improvements:
 
 ### Branches
 
-There is already a open issue for that, we will change the way how the docs are branched.
+Change the way how the docs repository uses branches.
+
+Currently we create a new branch when the Framework Team creates a new _main_ branch of CMFPlone.
+
+The last years and releases have proven that this is **not the way**.
+
+Because of the pace of development, time, effort, etc, etc. this only creates lots of extra work, because we have to maintain and merge content to even more branches of the docs.
+
+This is time consuming and "error prone" as it also adds confusion, about to with branch to commit to etc.
+
+Because of this we will change the branch model to the following.
+
+_master_ will be cutting edge aka rolling release.
+
+We will build "weekly" _unstable_ docs from this branch.
+
+This branch will be also the branch we most of the commits will happen.
+
+If there is a new release of Plone, we will cut a new branch of the master.
+
+The master keeps to be cutting edge and the new branch will the "last old version".
 
 ## Testing
 
@@ -158,7 +192,7 @@ The way how we run tests will change. With the new setup we will test with each 
 This has the following advantages:
 
 - tests are faster
-- we can better and 'easier' improve the docs and its tests
+- we can better and "easier" improve the docs and its tests
 - it is less de-motivating for people, since CI is "only" complaining about "their" commits.
 - tests are based on Redactor
 
@@ -193,19 +227,17 @@ Coster also fetches all images we need which are created by our jenkins-robots.
 
 After Coster is done fetching and building the docs, we do run again tests on the created HTML, like HTML validation, accessibility checks, etc, etc.
 
-Is these pass, Coster will create automatically "ready to run" container images (docker).
+If these tests pass, Coster will create automatically "ready to run" container images (docker).
 
 ## Deploying
 
-Each version in own container, plus weekly builds of 'unreleased'
+Each version in own container, plus weekly builds of "unreleased".
 
 Each version like 3, 4, 5 gets a own container.
 
 ### Coster
 
-pushes to Docker Hub
-
-See above, Coster creates, tags and uploads the container to Docker Hub.
+Coster creates, tags and uploads the container to Docker Hub.
 
 For "unstable" this will be done, once a week or so.
 
@@ -225,9 +257,13 @@ henry serve
 
 ### Hosting
 
+We will use the new k8 cluster for hosting.
+
 k8 recognizes if there is an new image available and automatically downloads and switched (blue-green) to the new image.
 
 ## Helper Tools
+
+tbc
 
 ### Henry
 
