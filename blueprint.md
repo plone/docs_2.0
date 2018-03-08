@@ -2,42 +2,33 @@
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
- - [Introduction](#introduction)
-- [Abstract](#abstract)
-- [Improvements](#improvements)
-- [Appearance](#appearance)
-- [Audience](#audience)
-- [Style](#style)
-- [Structure](#structure)
-
-**ToDo** Add docs split aka standalone
-
-- [Search](#search)
-- [Branches](#branches)
-
-- [Testing](#testing)
-
-  - [CI](#ci)
-  - [Tests On Commits](#tests-on-commits)
-  - [Tests On All Docs](#tests-on-all-docs)
-  - [Redactor](#redactor)
-  - [Test Overview](#test-overview)
-
-- [Building](#building)
-
-  - [Coster](#coster)
-
-- [Deploying](#deploying)
-
-  - [Each version in own container, plus weekly builds of 'unreleased'](#each-version-in-own-container-plus-weekly-builds-of-unreleased)
-  - [Coster pushes to Docker Hub](#coster-pushes-to-docker-hub)
-  - [Hosting](#hosting)
-
-- [Helper Tools](#helper-tools)
-
-  - [Henry (add henry docs overview)](#henry-add-henry-docs-overview)
-  - [Coster (add coster docs overview)](#coster-add-coster-docs-overview)
-  - [Redactor (note you can run tests also without Redactor)](#redactor-note-you-can-run-tests-also-without-redactor)
+- [Documentation 2.0](#documentation-20)
+	- [Introduction](#introduction)
+	- [Improvements](#improvements)
+		- [Appearance](#appearance)
+		- [Audience](#audience)
+		- [Style](#style)
+		- [Structure](#structure)
+			- [README Removal](#readme-removal)
+			- [External Removal](#external-removal)
+			- [Splitting](#splitting)
+		- [Search](#search)
+		- [Branches](#branches)
+	- [Testing](#testing)
+		- [CI](#ci)
+		- [Tests On Commits](#tests-on-commits)
+		- [Tests On All Docs](#tests-on-all-docs)
+		- [Redactor](#redactor)
+		- [Test Overview](#test-overview)
+	- [Building](#building)
+		- [Coster](#coster)
+	- [Deploying](#deploying)
+		- [Coster](#coster)
+		- [Hosting](#hosting)
+	- [Helper Tools](#helper-tools)
+		- [Henry](#henry)
+		- [Coster](#coster)
+		- [Redactor](#redactor)
 
 <!-- /TOC -->
 
@@ -97,6 +88,36 @@ To do so we need to make sure that all docs in the different categories are real
 - consistent and shorter headings
 
 ### Structure
+
+#### README Removal
+
+Currently we are including _READMEs_ from _external_ documentation like [bobtemplates.plone](https://github.com/plone/bobtemplates.plone).
+
+A _README_ is great for a developer, unfortunately it is less suited for including into documentation.
+
+Besides the wrong tone and goals of a _README_ also the nice buttons of Travis etc are no addition to the docs.
+
+They only add _noise_ and distraction.
+
+These are perfectly fine for a _README_ but less cool in the documentation.
+
+![alt text](https://raw.githubusercontent.com/plone/docs_2.0/master/_static/readme_screen_red_box.png "README in Docs")
+
+#### External Removal
+
+Because of _historical_ reasons and the way how the current documentation got structured we still use the directory _external_.
+
+This is maybe nice and logical for the _docs team_ but this add no extra value for the reader.
+
+Besides that, it also can lead to confusion, because for the (new) reader it is not clear _why_ certain parts of the docs are located under _external_.
+
+Further is breaks with the structure and consistency of the docs.
+
+![alt text](https://raw.githubusercontent.com/plone/docs_2.0/master/_static/external_removal.png "Removal of external dir")
+
+#### Splitting
+
+(standalone)
 
 Improve the structure by moving some parts to other locations. Our current structure does is not always logical or understandable for (new) developer.
 
@@ -176,11 +197,13 @@ Is these pass, Coster will create automatically "ready to run" container images 
 
 ## Deploying
 
-### Each version in own container, plus weekly builds of 'unreleased'
+Each version in own container, plus weekly builds of 'unreleased'
 
 Each version like 3, 4, 5 gets a own container.
 
-### Coster pushes to Docker Hub
+### Coster
+
+pushes to Docker Hub
 
 See above, Coster creates, tags and uploads the container to Docker Hub.
 
@@ -206,8 +229,14 @@ k8 recognizes if there is an new image available and automatically downloads and
 
 ## Helper Tools
 
-### Henry (add henry docs overview)
+### Henry
 
-### Coster (add coster docs overview)
+(add henry docs overview)
 
-### Redactor (note you can run tests also without Redactor)
+### Coster
+
+(add coster docs overview)
+
+### Redactor
+
+(note you can run tests also without Redactor)
