@@ -52,7 +52,8 @@ From improving the wording, over structure till building and releasing this docu
 
 ### Appearance
 
-Make the _look and feel_ better, make it easier for people to _identify_ and find what they are looking for. This can be done for example with a improved landing-page, with visual improvements and adding _boxes_ per audience.
+Make the _look and feel_ better, make it easier for people to _identify_ and find what they are looking for.
+This can be done for example with a improved landing-page, with visual improvements and adding _boxes_ per audience.
 
 **Example**
 
@@ -62,7 +63,8 @@ Use a theme which is focused on presenting content !
 
 Our current one is too distracting.
 
-If you "click" on the box with your audience you get immediately to the parts of the docs you are looking for, for example "theming" and then you only see the theming docs, if you click "here" on search you get a custom search (with a button) to search all docs, too.
+If you "click" on the box with your audience you get immediately to the parts of the docs you are looking for,
+for example "theming" and then you only see the theming docs, if you click "here" on search you get a custom search (with a button) to search all docs, too.
 
 Examples of content focused themes with less visual interruptions
 
@@ -80,7 +82,8 @@ Examples of content focused themes with less visual interruptions
 
 ### Audience
 
-Better and easier distinction between audiences. If a user is looking for the docs about theming the user is at this moment not interested in docs about ZEODB.
+Better and easier distinction between audiences.
+If a user is looking for the docs about theming the user is at this moment not interested in docs about ZEODB.
 
 To do so we need to make sure that all docs in the different categories are really:
 
@@ -98,9 +101,11 @@ To do so we need to make sure that all docs in the different categories are real
 
 ### Structure
 
-Improve the structure by moving some parts to other locations. Our current structure does is not always logical or understandable for (new) developer.
+Improve the structure by moving some parts to other locations.
+Our current structure does is not always logical or understandable for (new) developer.
 
-We can improve that by re-locating some parts to other locations and by 'merging' some parts into one chapter. Examples are here: Installation and developer docs
+We can improve that by re-locating some parts to other locations and by 'merging' some parts into one chapter.
+Examples are here: Installation and developer docs
 
 Further remove/improve the structure to make the docs less **nested**.
 
@@ -200,7 +205,8 @@ This has the following advantages:
 
 ### Redactor
 
-This is our new test-framework where we can configure the amount of tests and also the level, etc. Some of the tests we "only" run on release time, like HTML, other ones like style-guide we run **always**.
+This is our new test-framework where we can configure the amount of tests and also the level, etc.
+Some of the tests we "only" run on release time, like HTML, other ones like style-guide we run **always**.
 
 ### Test Overview
 
