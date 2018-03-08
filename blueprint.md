@@ -9,6 +9,9 @@
 - [Audience](#audience)
 - [Style](#style)
 - [Structure](#structure)
+
+**ToDo** Add docs split aka standalone
+
 - [Search](#search)
 - [Branches](#branches)
 
@@ -109,6 +112,8 @@ List of other structure improvements:
 
 - remove **/external**
 - remove **READMEs** of docs we include
+
+**ToDo** Screen of README in docs
 
 ### Search
 
